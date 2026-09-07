@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0038)http://conf.mitme.ru/articles/135.html -->
+<HTML><HEAD><TITLE>Генетические алгоритмы</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY><LINK href="Генетические алгоритмы.files/styles.css" rel=stylesheet>
+<TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+  <TBODY>
+  <TR>
+    <TD><IMG height=82 src="Генетические алгоритмы.files/conf-site_01.jpg" 
+      width=760><BR><A href="http://conf.mitme.ru/"><IMG height=24 
+      alt="Научно-техническая конференция студентов, аспирантов и молодых специалистов" 
+      src="Генетические алгоритмы.files/conf-site_0.gif" width=195 
+      border=0></A><A href="http://conf.mitme.ru/rules"><IMG height=24 
+      alt="Для участников коференции" 
+      src="Генетические алгоритмы.files/conf-site_1.gif" width=113 
+      border=0></A><A href="http://conf.mitme.ru/orgcom/index.html"><IMG 
+      height=24 src="Генетические алгоритмы.files/conf-site_03.gif" width=113 
+      border=0></A><A href="http://conf.mitme.ru/winers/index.html"><IMG 
+      height=24 src="Генетические алгоритмы.files/conf-site_04.gif" width=113 
+      border=0></A><A href="http://mitme.ru/forum/"><IMG height=24 
+      src="Генетические алгоритмы.files/conf-site_05.gif" width=113 
+      border=0></A><A href="http://mitme.ru/guestbook/"><IMG height=24 
+      src="Генетические алгоритмы.files/conf-site_06.gif" width=113 
+    border=0></A></TD></TR></TBODY></TABLE>
+<TABLE height=300 cellSpacing=0 cellPadding=0 width=760 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=107 
+    background="Генетические алгоритмы.files/conf-site_15.gif"><A 
+      href="http://conf.mitme.ru/articles/sec1.html"><IMG height=27 
+      alt="Математические и физико-технические науки" 
+      src="Генетические алгоритмы.files/conf-site_07.gif" width=107 
+      border=0></A><A href="http://conf.mitme.ru/articles/sec2.html"><IMG 
+      height=27 alt="Информационные технологии" 
+      src="Генетические алгоритмы.files/conf-site_10.gif" width=107 
+      border=0></A><A href="http://conf.mitme.ru/articles/sec3.html"><IMG 
+      height=27 alt="Электроника и приборостроение" 
+      src="Генетические алгоритмы.files/conf-site_11.gif" width=107 
+      border=0></A><A href="http://conf.mitme.ru/articles/sec4.html"><IMG 
+      height=27 
+      alt="Производственные технологии. Новые материалы и химические продукты" 
+      src="Генетические алгоритмы.files/conf-site_12.gif" width=107 
+      border=0></A><A href="http://conf.mitme.ru/articles/sec5.html"><IMG 
+      height=27 alt="Гуманитарные и экономические науки" 
+      src="Генетические алгоритмы.files/conf-site_13.gif" width=107 
+    border=0></A></TD>
+    <TD width=10></TD>
+    <TD vAlign=top width=609><B><FONT face="Times New Roman" size=4>
+      <P align=center>Генетические алгоритмы</P></B></FONT><FONT size=4>
+      <P align=justify></P></FONT><FONT face="Times New Roman" size=4>
+      <P align=center>К.Н.Конева, Л.М.Терехова</P></FONT><FONT size=4>
+      <P align=center>(</FONT><FONT face="Times New Roman" size=4>Факультет 
+      прикладной математики</FONT><FONT size=4>)</P>
+      <P align=center></P></FONT><FONT face="Times New Roman" size=4>
+      <P align=justify>Природа поражает своей сложностью и богатством всех своих 
+      проявлений. Среди примеров можно назвать сложные социальные системы, 
+      иммунные и нейронные системы, сложные взаимосвязи между видами. Они - 
+      всего лишь некоторые из чудес, которые стали более очевидны, когда мы 
+      стали глубже исследовать себя самих и мир вокруг нас. Наука - это одна из 
+      сменяющих друг друга систем веры, которыми мы пытаемся</FONT><FONT size=4> 
+      </FONT><FONT face="Times New Roman" size=4>объяснить то, что наблюдаем, 
+      этим самым, изменяя себя, чтобы приспособиться к новой информации, 
+      получаемой из внешнего мира. Многое из того, что мы видим и наблюдаем, 
+      можно объяснить единой теорией: теорией эволюции через наследственность, 
+      изменчивость и отбор.</P>
+      <P align=justify>Ученые, занимающиеся компьютерными исследованиями, 
+      обратились к теории эволюции в поисках вдохновения. Возможность того, что 
+      вычислительная система, наделенная простыми механизмами изменчивости и 
+      отбора, могла бы функционировать по аналогии с законами эволюции в 
+      природных системах, была очень привлекательна. Эта надежда стала причиной 
+      появления ряда вычислительных систем, построенных на принципах 
+      естественного отбора.</P>
+      <P align=justify>Генетические Алгоритмы</P>
+      <P align=justify>Генетические Алгоритмы - адаптивные методы поиска, 
+      которые в последнее время часто используются для решения задач 
+      функциональной оптимизации. Они основаны на генетических процессах 
+      биологических организмов: биологические популяции развиваются в течении 
+      нескольких поколений, подчиняясь законам естественного отбора 
+      и</FONT><FONT size=4> </FONT><FONT face="Times New Roman" size=4>по 
+      принципу "выживает наиболее приспособленный" (survival of the fittest), 
+      открытому Чарльзом Дарвином. Подражая этому процессу генетические 
+      алгоритмы способны "развивать" решения реальных задач, если те 
+      соответствующим образом закодированы.</P>
+      <P align=justify>Основные принципы ГА были сформулированы Голландом 
+      (Holland, 1975), и хорошо описаны во многих работах. В отличие от 
+      эволюции, происходящей в природе, ГА только моделируют те процессы в 
+      популяциях, которые являются существенными для развития. Точный ответ на 
+      вопрос: какие биологические процессы существенны для развития, и какие 
+      нет? - все еще открыт для исследователей.</P>
+      <P align=justify>Когда следует применять генетический 
+      алгоритм?</P></FONT><FONT size=4>
+      <P align=justify></FONT><FONT face="Times New Roman" size=4>Генетические 
+      алгоритмы в различных формах применились ко многим научным и техническим 
+      проблемам. Генетические алгоритмы использовались при создании других 
+      вычислительных структур, например, автоматов или сетей сортировки. В 
+      машинном обучении они использовались при проектировании нейронных сетей 
+      или управлении роботами. Они также применялись при моделировании развития 
+      в различных предметных областях, включая биологические (экология, 
+      иммунология и популяционная генетика), социальный (такие как экономика и 
+      политические системы) и когнитивные системы.</P>
+      <P align=justify>Тем не менее, возможно наиболее популярное приложение 
+      генетических алгоритмов - оптимизация многопараметрических функций. Многие 
+      реальные задачи могут быть сформулированы как поиск оптимального значения, 
+      где значение - сложная функция, зависящая от некоторых входных параметров. 
+      В некоторых случаях, представляет интерес найти те значения параметров, 
+      при которых достигается наилучшее точное значение функции. В других 
+      случаях, точный оптимум не требуется - решением может считаться любое 
+      значение, которое лучше некоторой заданное величины.</P>
+      <P align=justify>Цель в оптимизации с помощью ГА состоит в том, чтобы 
+      найти лучшее возможное решение или решения задачи по одному или нескольким 
+      критериям. Чтобы реализовать генетический алгоритм нужно сначала выбрать 
+      подходящую структуру для представления этих решений. </P>
+      <P align=justify>Работа простого генетического алгоритма</P>
+      <P align=justify>Простой ГА случайным образом генерирует начальную 
+      популяцию структур. Работа ГА представляет собой итерационный процесс, 
+      который продолжается до тех пор, пока не выполнятся заданное число 
+      поколений или какой-либо иной критерий остановки. На каждом поколении ГА 
+      реализуется отбор пропорционально приспособленности, одноточечный 
+      кроссовер и мутация. Сначала, пропорциональный отбор назначает каждой 
+      структуре вероятность Ps(i) равную отношению ее приспособленности к 
+      суммарной приспособленности популяции.</P>
+      <P align=justify>Затем происходит отбор (с замещением) всех 
+      </FONT><I><FONT size=4>n</I></FONT><FONT face="Times New Roman" size=4> 
+      особей для дальнейшей генетической обработки, согласно величине Ps(i). 
+      Простейший пропорциональный отбор - рулетка (roulette-wheel selection, 
+      Goldberg, 1989c) - отбирает особей с помощью </FONT><I><FONT 
+      size=4>n</I></FONT><FONT face="Times New Roman" size=4> "запусков" 
+      рулетки. Колесо рулетки содержит по одному сектору для каждого члена 
+      популяции. Размер i-ого сектора пропорционален соответствующей величине 
+      Ps(i). При таком отборе члены популяции с более высокой приспособленностью 
+      с большей вероятность будут чаще выбираться, чем особи с низкой 
+      приспособленностью. Главная трудность с возможностью построения 
+      вычислительных систем, основанных на принципах естественного отбора и 
+      применением этих систем в прикладных задачах, состоит в том, что природные 
+      системы достаточно хаотичны, а все наши действия, фактически, носят четкую 
+      направленность. Мы используем компьютер как инструмент для решения 
+      определенных задач, которые мы сами и формулируем, и мы акцентируем 
+      внимание на максимально быстром выполнении при минимальных затратах. 
+      Природные системы не имеют никаких таких целей или ограничений, во всяком 
+      случае, нам они не очевидны. Выживание в природе не направлено к некоторой 
+      фиксированной цели, вместо этого эволюция совершает шаг вперед в любом 
+      доступном направлении. </P></FONT><FONT size=4>
+      <P align=justify></P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify></P>
+      <P align=justify></P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P></FONT>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P><FONT size=4>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P>
+      <P align=justify>&nbsp;</P></FONT><BR>
+      <HR>
+
+      <H3>Добавить свое сообщение</H3>
+      <TABLE cellSpacing=0 cellPadding=2 width=600 border=0>
+        <TBODY>
+        <TR bgColor=#cccccc>
+          <TD>
+            <FORM action=/cgi-bin/add_response method=post><INPUT type=hidden 
+            value=add name=path> <INPUT type=hidden value=135 name=article_id> 
+            Имя </TD>
+          <TD><INPUT maxLength=50 size=50 name=name> </TD></TR>
+        <TR bgColor=#cccccc>
+          <TD>email </TD>
+          <TD><INPUT maxLength=50 size=50 name=email> </TD></TR>
+        <TR bgColor=#cccccc>
+          <TD>http:// </TD>
+          <TD><INPUT maxLength=50 size=50 name=http><BR></TD></TR>
+        <TR bgColor=#cccccc>
+          <TD>Тема</TD>
+          <TD><INPUT maxLength=50 size=50 name=subj> </TD></TR>
+        <TR>
+          <TD align=middle bgColor=#dddddd colSpan=2>Сообщение </TD></TR>
+        <TR>
+          <TD align=middle bgColor=#dddddd colSpan=2><TEXTAREA name=it_text rows=6 cols=70 MAXLENGTH="1024"></TEXTAREA><BR><INPUT 
+            type=hidden value=http://conf.mitme.ru/articles/135.html name=url> 
+            <BR></TD></TR>
+        <TR>
+          <TD>&nbsp; </TD>
+          <TD align=right><INPUT type=submit value=Добавить> 
+        </FORM></TD></TR></TBODY></TABLE>
+      <CENTER><A href="http://conf.mitme.ru/articles/135_all.html">Показать 
+      полностью все сообщения.</A></CENTER><BR>
+      <TABLE cellSpacing=1 width=600 bgColor=#000000 border=0>
+        <TBODY>
+        <TR>
+          <TD align=middle bgColor=#cccccc>Тема</TD>
+          <TD align=middle bgColor=#dddddd>Имя</TD>
+          <TD align=middle bgColor=#cacaca>Дата</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=626">ГА</A></TD>
+          <TD align=middle bgColor=#dddddd>Паша</TD>
+          <TD align=right bgColor=#cacaca>2003-06-03</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=620">слишком 
+            тривиально</A></TD>
+          <TD align=middle bgColor=#dddddd>Анна</TD>
+          <TD align=right bgColor=#cacaca>2003-05-16</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=586">ГА, 
+            ИИ, СОК</A></TD>
+          <TD align=middle bgColor=#dddddd>AlexD</TD>
+          <TD align=right bgColor=#cacaca>2003-02-10</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=575">И это 
+            доклад??? Что за лажа!!!</A></TD>
+          <TD align=middle bgColor=#dddddd>FUCKep</TD>
+          <TD align=right bgColor=#cacaca>2003-01-14</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=567">Всем 
+            кто интересуется ГА</A></TD>
+          <TD align=middle bgColor=#dddddd>Юрий</TD>
+          <TD align=right bgColor=#cacaca>2002-12-09</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=556">Нет 
+            слов. ПОЗОР.</A></TD>
+          <TD align=middle bgColor=#dddddd>Александр Пивоваров</TD>
+          <TD align=right bgColor=#cacaca>2002-10-13</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=519">К.Н.Коневой, 
+            Л.М.Тереховой</A></TD>
+          <TD align=middle bgColor=#dddddd>Игорь</TD>
+          <TD align=right bgColor=#cacaca>2002-04-22</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=468">Это 
+            плагиат - в Инете это все есть!</A></TD>
+          <TD align=middle bgColor=#dddddd>galex</TD>
+          <TD align=right bgColor=#cacaca>2002-01-22</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=454">Генетические 
+            алгоритмы</A></TD>
+          <TD align=middle bgColor=#dddddd>Наталья</TD>
+          <TD align=right bgColor=#cacaca>2001-11-23</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=455">Генетические 
+            алгоритмы</A></TD>
+          <TD align=middle bgColor=#dddddd>Наталья</TD>
+          <TD align=right bgColor=#cacaca>2001-11-23</TD></TR>
+        <TR>
+          <TD bgColor=#cccccc><A 
+            href="http://conf.mitme.ru/common/sql?path=showmsg&amp;id=247">Добро 
+            пожаловать!</A></TD>
+          <TD align=middle bgColor=#dddddd>Центр СИТМО</TD>
+          <TD align=right bgColor=#cacaca>2001-02-23</TD></TR></TBODY></TABLE>
+      <CENTER><A href="http://conf.mitme.ru/articles/135_all.html">Показать 
+      полностью все сообщения.</A></CENTER><BR><BR></TD>
+    <TD width=10></TD>
+    <TD width=24 
+  background="Генетические алгоритмы.files/conf-site_17.gif"></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+  <TBODY>
+  <TR>
+    <TD colSpan=3><IMG height=3 
+      src="Генетические алгоритмы.files/conf-site_19.gif" width=760></TD></TR>
+  <TR>
+    <TD width=104 background="Генетические алгоритмы.files/conf-site_20.gif">
+      <SCRIPT language=javascript>
+u="u991.22.spylog.com";d=document;nv=navigator;na=nv.appName;p=1;
+bv=Math.round(parseFloat(nv.appVersion)*100);
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y="";
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>";
+y+="<img src='http://"+u+"/cnt?"+z+
+"&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0  width=1 height=1  alt=''>";
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></SCRIPT>
+      <NOSCRIPT><A href="http://u991.22.spylog.com/cnt?f=3&amp;p=1" 
+      target=_blank><IMG height=1 alt="" 
+      src="Генетические алгоритмы.files/cnt.gif" width=1 border=0> 
+      </A></NOSCRIPT>
+      <SCRIPT language=javascript1.2><!--
+if(!n) { d.write("--"+">"); }//--></SCRIPT>
+<!--TopList COUNTER-->
+      <SCRIPT language=JavaScript type=text/javascript><!--
+d=document;js=10;a='';a+=';r='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1 type=text/javascript><!--
+js=11;a+=';j='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2 type=text/javascript><!--
+js=12;s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3 type=text/javascript><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT language=JavaScript type=text/javascript><!--
+d.write('<img src="http://195.34.34.80/counter'+
+'?id=50234;js='+js+a+'" alt="" height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG height=1 alt="" src="" width=1></NOSCRIPT>
+      <SCRIPT language=JavaScript type=text/javascript><!--
+if(js>11)d.write('--'+'>')
+//--></SCRIPT>
+       <!--TopList COUNTER--></TD>
+    <TD width=468><A href="http://www.reklama.ru/cgi-bin/href/itsoft?" 
+      target=_top><IMG height=60 alt="Reklama.Ru. The Banner Network." isMap 
+      src="Генетические алгоритмы.files/banner2.gif" width=468 border=0></A> </TD>
+    <TD width=188 
+    background="Генетические алгоритмы.files/conf-site_23.gif"></TD></TR>
+  <TR>
+    <TD class=n width=760 
+    background="Генетические алгоритмы.files/conf-site_24.gif" colSpan=3 
+    height=20>
+      <CENTER><FONT color=white>© Центр <A class=fo 
+      href="http://mitme.ru/">СИТМО</A>, Веб-студия <A class=fo 
+      href="http://itsoft.ru/">ITsoft</A></FONT></CENTER></TD></TR></TBODY></TABLE></BODY></HTML>

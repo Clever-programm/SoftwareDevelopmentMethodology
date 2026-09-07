@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0036)http://qai.narod.ru/GA/testfunc.html -->
+<!-- saved from url=http://qai.narod.ru/GA/testfunc.html --><HTML><HEAD><TITLE>Генетические алгоритмы - Тестовые функции</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META 
+content="генетический алгоритм, тестовые функции, результаты,&#13;&#10;Де Джонг" 
+name=KEYWORDS>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY vLink=navy aLink=#0 link=teal bgColor=#f0f8ff>
+<TABLE cellSpacing=2 cellPadding=10 width="98%" align=center border=0>
+  <TBODY lang=.>
+  <TR>
+    <TD width=150></TD>
+    <TD bgColor=teal>
+      <P align=center><FONT color=#f0f8ff><FONT size=6>Генетические 
+      алгоритмы</FONT></P></FONT></TD>
+    <TD width=100></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD><BR>
+      <H2 align=center>Тестовые функции</H2>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=top width=150>
+      <TABLE borderColor=#f0f8ff width="100%" bgColor=teal border=1>
+        <TBODY>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="http://www.qai.narod.ru/index.html">На 
+главную</A></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="http://qai.narod.ru/GA/index.html">Генетические 
+            алгоритмы</A></TD></TR></TBODY></TABLE>
+      <P>
+      <TABLE borderColor=#f0f8ff width="100%" bgColor=teal border=1>
+        <TBODY>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="mailto:qai@mail.ru">Написать 
+      письмо</A></TD></TR></TBODY></TABLE></P></TD>
+    <TD align=justify>
+      <P align=justify>Итак вы написали свой собственный ГА и теперь вам хочется 
+      знать насколько он хорош. Ниже приведены некоторые тестовые функции для 
+      ГА, которые я нашел в сети на странице Лазаускаса, адрес не помню, но 
+      помню, что вышел туда с личной страницы В.Спирса (ищите ссылку на него у 
+      <A href="http://saisa.chat.ru/ga.html">Исаева С.А.</A>). У Исаева же есть 
+      функции для проверки ГА в задачах с ограничениями в соответствующей 
+      публикации. Также я находил тестовые функции, которые предлагает Де Джонг 
+      (один из студентов Холланда), их я буду помечать DeJong1, DeJong2, 
+      DeJong3, DeJong4 и DeJong5 в соответствии с тем, как он их пронумеровал. 
+      <P align=justify>Все тестовые функции могут иметь различное число 
+      параметров (n). Поэтому имеет смысл запустить алгоритм для оптимизации 
+      некоторой функции сначала с небольшим n (например, 10 или 20), а затем с 
+      n=50, 100, 200,... Это даст возможность проверить "масштабируемость" 
+      алгоритма. 
+      <P align=justify>Эффективность работы ГА принято оценивать количеством 
+      вычислений целевой функции. Чем меньше, тем лучше. После некоторых функций 
+      приведены результаты работы моего ГА (назовем его QGA). Сразу оговорюсь, 
+      что результаты целевой функции меньше 0.001 тоже засчитывались как 
+      найденный глобальный минимум. Вот характеристики QGA: 
+      <UL>
+        <LI>Фиксированный размер популяции; 
+        <LI>Фиксированная разрядность генов; 
+        <LI>
+        <P align=justify>Количество точек разрыва кроссовера равно числу генов 
+        (на каждый ген приходится ровно одна точка); </P>
+        <LI>Для скрещивания отбираются 50% популяции; 
+        <LI>Вероятность мутации 95%; 
+        <LI>Две "элитные" особи; 
+        <LI>Удаление одинаковых особей из популяции (с помощью мутации); 
+        <LI>Точность вычислений: 0.001; 
+        <LI>Результат подсчитан по 50 запускам алгоритма; </LI></UL>
+      <P align=justify>Т.к. генетические алгоритмы используют стохастичность, то 
+      для того, чтобы определить, насколько эффективен ваш ГА нужно запустить 
+      его на одной и той же тестовой функции несколько раз и только после этого 
+      анализировать результат. Например, мой ГА для функции Растригина от 50 
+      переменных находит глобальный минимум в ~40% случаев, используя не более 
+      10000 вычислений функции. 
+      <P align=justify>Для некоторых функций есть графики для случая двух 
+      переменных. Графики представляют "сечение" поверхности функции плоскостью, 
+      проходящей через глобальный минимум, перпендикулярной одной из осей 
+      координат. 
+      <P align=justify>Также большой набор тестовых функций есть <A 
+      href="http://www.mat.univie.ac.at/~neum/glopt/test_results.html">здесь</A>. 
+
+      <P align=justify>Если что, можете <A 
+      href="mailto:qai@mail.ru">присылать</A> свои результаты, я их также 
+      размещу для сравнения, а также для увеселения публики :)). 
+      <HR color=#b0b8bf>
+
+      <P align=justify>
+      <LI><STRONG><EM>Sphere model (DeJong1)</EM></STRONG><A 
+      href="http://qai.narod.ru/GA/spheregraph.html" target=_blank>(график)</A> 
+      <P align=justify>Считается легкой функцией для любого метода оптимизации. 
+      <P align=justify><IMG alt="f(x)=sum(i=1,n) {x(i) ^ 2}" 
+      src="Генетические алгоритмы - Тестовые функции.files/spherefunc.gif" 
+      border=1><BR>х<FONT face=Symbol>О</FONT>(-5,12; 5,12)<BR>Один минимум 
+      равный 0 в точке, где x<SUB>i</SUB>=0.0. 
+      <P align=justify><B>Результат QGA</B>:<BR><I>n=10</I>, количество 
+      нахождений глобального минимума (вообще-то он здесь один...:)) 86%, число 
+      вычислений целевой функции не более 1250, максимальное значение 
+      0,008325.<BR><I>n=30</I>, количество нахождений глобального минимума 34%, 
+      число вычислений целевой функции не более 1250, максимальное значение 
+      0,108851.<BR><I>n=50</I>, количество нахождений глобального минимума 46%, 
+      число вычислений целевой функции не более 2500, максимальное значение 
+      0,016291, для скрещивания отбиралось 40% популяции. 
+      <HR color=#b0b8bf>
+
+      <P align=justify></P>
+      <LI><STRONG><EM>Rosenbrock's saddle (DeJong2)</EM></STRONG><A 
+      href="http://qai.narod.ru/GA/rosengraph.html" target=_blank>(график)</A> 
+      <P align=justify><IMG 
+      alt="F(x) = Sum(i=1,n) {100*(x_(i+1)-x_i^2)^2 + (1-x_i)^2}" 
+      src="Генетические алгоритмы - Тестовые функции.files/rosenfunc.gif" 
+      border=1><BR>х<FONT face=Symbol>О</FONT>(-2,048; 2,048)<BR>Минимум равный 
+      0 в точке, где x<SUB>i</SUB>=1.0. Функция имеет большое медленно убывающее 
+      плато. 
+      <P align=justify><B>Результат QGA</B>:<BR><I>n=2</I>, количество 
+      нахождений глобального минимума 92%, число вычислений целевой функции не 
+      более 1250, максимальное значение функции 0,00169118.<BR><I>n=4</I>, 
+      количество нахождений глобального минимума 86%, число вычислений целевой 
+      функции не более 1250, максимальное значение функции 
+      0,00504982.<BR><I>n=10</I>, количество нахождений глобального минимума 0%, 
+      число вычислений целевой функции не более 10000, максимальное значение 
+      функции 0,0186537, минимальное значение функции 0,0019092, для скрещивания 
+      отбиралось 50% популяции.<BR><I>n=10</I>, количество нахождений 
+      глобального минимума 8%, число вычислений целевой функции не более 10000, 
+      максимальное значение функции 0,0127758, для скрещивания отбиралось 40% 
+      популяции.<BR>
+      <HR color=#b0b8bf>
+
+      <P align=justify></P>
+      <LI><STRONG><EM>Step function (DeJong3)</EM></STRONG> 
+      <P align=justify><IMG alt="F(x) = Sum(i=1,n) { integer(x_i) }" 
+      src="Генетические алгоритмы - Тестовые функции.files/stepfunc.gif" 
+      border=1><BR>х<FONT face=Symbol>О</FONT>(-5,12; 5,12)<BR>|[x<SUB>i</SUB>]| 
+      - модуль целой части<BR>Минимум равный 0 в точке, где x<SUB>i</SUB>=0.0. 
+      <HR color=#b0b8bf>
+
+      <P align=justify></P>
+      <LI><STRONG><EM>Gaussian quartic (DeJong4)</EM></STRONG><A 
+      href="http://qai.narod.ru/GA/gaussgraph.html" target=_blank>(график)</A> 
+      <P align=justify><IMG alt="F(x) = Sum(i=1,n) {x_i^4 + gauss(0,1)}" 
+      src="Генетические алгоритмы - Тестовые функции.files/gaussfunc.gif" 
+      border=1><BR>х<FONT face=Symbol>О</FONT>(-1.28; 1.28)<BR>gauss(0,1) - 
+      функция, возвращающая случайную величину с нормальным распределением с 
+      мат. ожиданием в 0 и дисперсией равной 1.<BR>Минимум равный 0 в точке, где 
+      x<SUB>i</SUB>=0.0. 
+      <HR color=#b0b8bf>
+
+      <P align=justify></P>
+      <LI><STRONG><EM>Shekel's foxholes (DeJong5)</EM></STRONG> 
+      <P align=justify>Пока что нету, т.к. я встретил несколько вариантов и не 
+      "въехал", что - куда. 
+      <HR color=#b0b8bf>
+
+      <P align=justify></P>
+      <LI><STRONG><EM>Rastrigin's function</EM></STRONG><A 
+      href="http://qai.narod.ru/GA/rastrgraph.html" target=_blank>(график)</A> 
+      <P align=justify>Функция со сложным рельефом. Считается сложной для 
+      оптимизации. 
+      <P align=justify><IMG 
+      alt="F(x) = n*A + Sum(i=1,n) {x_i^2 - A*cos(2*pi*x_i)}" 
+      src="Генетические алгоритмы - Тестовые функции.files/rastrfunc.gif" 
+      border=1><BR>х<FONT face=Symbol>О</FONT>(-5,12; 5,12)<BR>Минимум равный 0 
+      в точке, где x<SUB>i</SUB>=0.0.<BR>Локальный минимум в точке, где одна 
+      координата равна 1.0, а остальные равны 0.0 
+      <P align=justify><B>Результат QGA</B>:<BR><I>n=20</I>, количество 
+      нахождений глобального минимума 16%, число вычислений целевой функции не 
+      более 5000, максимальное значение функции 19,8992.<BR><I>n=20</I>, 
+      количество нахождений глобального минимума 26%, число вычислений целевой 
+      функции не более 10000, максимальное значение функции 
+      17,997.<BR><I>n=50</I>, количество нахождений глобального минимума 38%, 
+      число вычислений целевой функции не более 10000, максимальное значение 
+      функции 49,869.<BR><I>Возможно, такие странные результаты обусловленны 
+      рельефом функции Растригина от 20 и 50 переменных, а может быть, и работой 
+      моего ГА. Например, мне никак не удается точно аппроксимировать 
+      квадратичной функцией (всего-то три параметра) набор из пяти точек, 
+      которые строго принадлежат графику параболы.</I>&gt;:-i 
+      <HR color=#b0b8bf>
+
+      <P align=justify></P>
+      <LI><STRONG><EM>Schwefel's (Sine Root) Function</EM></STRONG><A 
+      href="http://qai.narod.ru/GA/schwgraph.html" target=_blank>(график)</A> 
+      <P align=justify><IMG 
+      alt="F(x) = V*n + Sum(i=1,n) {-x_i*sin(sqrt(abs(x_i)))}" 
+      src="Генетические алгоритмы - Тестовые функции.files/schwfunc.gif" 
+      border=1><BR>х<FONT face=Symbol>О</FONT>(-500; 500)<BR>Минимум равный 0 в 
+      точке, где x<SUB>i</SUB>=420.9687.<BR>Локальный минимум в точке, где одна 
+      координата равна -302.5232, а остальные равны 420.9687. Т.к. локальный 
+      минимум находится далеко от глобального, то есть опасность, что алгоритм 
+      "собъется с пути". Угол под знаком синуса получается в радианах. 
+      <HR color=#b0b8bf>
+
+      <P align=justify></P>
+      <LI><STRONG><EM>Griewangk's Function</EM></STRONG><A 
+      href="http://qai.narod.ru/GA/griewgraph.html" target=_blank>(график)</A> 
+      <P align=justify><IMG 
+      alt="F(x) = 1 + Sum(i=1,n) {(x_i^2)/4000} - Product(i=1,n) {cos(x_i/sqrt(i))}" 
+      src="Генетические алгоритмы - Тестовые функции.files/griewfunc.gif" 
+      border=1><BR>х<FONT face=Symbol>О</FONT>(-600; 600)<BR>Минимум равный 0 в 
+      точке, где x<SUB>i</SUB>=0.0.<BR>При n=10 есть ещё 4 локальных минимума 
+      равных 0,0074 приблизительно в точке (+-Pi, +-Pi*sqrt(2), 0, ..., 0). 
+      <HR color=#b0b8bf>
+
+      <P align=justify></P>
+      <LI><STRONG><EM>Ackley's Function</EM></STRONG><A 
+      href="http://qai.narod.ru/GA/ackleygraph.html" target=_blank>(график)</A> 
+      <P align=justify><IMG 
+      alt="F(x) = 20 + e - 20*exp(-0.2*sqrt((1/n)*Sum(i=1,n) {x_i^2})) - exp((1/n)*Sum(i=1,n){cos(2*pi*x_i)})" 
+      src="Генетические алгоритмы - Тестовые функции.files/ackleyfunc.gif" 
+      border=1><BR>х<FONT face=Symbol>О</FONT>(-30; 30)<BR>Минимум равный 0 в 
+      точке, где x<SUB>i</SUB>=0.0.<BR>
+      <HR color=black>
+
+      <P align=justify>Источники: 
+      <OL>
+        <LI>
+        <P align=justify>Deniz Yuret and Michael de la Maza "Dynamic Hill 
+        Climbing: Overcoming the limitations of optimization techniques.". </P>
+        <LI>
+        <P align=justify>Тестовые функции с личной страницы <A 
+        href="http://www.aic.nrl.navy.mil/~spears/">Вильяма Спирса (William 
+        Spears)</A> </P></LI></OL></LI></TD>
+    <TD vAlign=top width=100>
+      <TABLE borderColor=#f0f8ff bgColor=teal border=1>
+        <TBODY>
+        <TR bgColor=teal>
+          <TD align=middle><FONT color=#f0f8ff>Ссылки</FONT></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="http://saisa.chat.ru/ga.html">Генетические алгоритмы от 
+            Saisa (Исаев С.А.)</A></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="http://g-u-t.chat.ru/ga/index.html">Генетические 
+            алгоритмы на g-u-t.chat.ru</A></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A 
+            href="http://www.estec.esa.nl/outreach/gatutor/Default.htm">GA 
+            Tutorial</A></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="http://www.aic.nrl.navy.mil/galist">GA 
+Archive</A></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A 
+        href="http://www-illigal.ge.uiuc.edu:8080/">ISGEC</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<HR color=#b0b8bf>
+
+<TABLE cellSpacing=2 cellPadding=2 width="95%" align=center border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=. align=middle><FONT color=#b0b8bf>Made by Qwerty. 
+    2003.</FONT></TD></TR></TBODY></TABLE><!-- ><!-- "><!-- '><!-- --></TEXTAREA></FORM></TITLE></COMMENT></A>
+<DIV></DIV></SPAN></ILAYER></LAYER></IFRAME></NOFRAMES></STYLE></NOSCRIPT></TABLE></SCRIPT></APPLET></FONT>
+<STYLE>#bn {
+	DISPLAY: block
+}
+#bt {
+	DISPLAY: block
+}
+</STYLE>
+
+<SCRIPT language=JavaScript 
+src="Генетические алгоритмы - Тестовые функции.files/163"></SCRIPT>
+<!-- mailto:spm111@yandex.ru --></BODY></HTML>

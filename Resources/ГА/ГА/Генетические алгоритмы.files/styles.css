@@ -1,0 +1,21 @@
+BODY {
+	MARGIN-TOP: 0px; FONT-SIZE: 10pt; MARGIN-LEFT: 0px; COLOR: #000000; MARGIN-RIGHT: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff
+}
+.n {
+	FONT-SIZE: 10pt; COLOR: #000000
+}
+A {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+A.fo {
+	COLOR: #ddffdd; TEXT-DECORATION: none
+}
+A.fo:hover {
+	COLOR: #ddffdd; TEXT-DECORATION: underline
+}
+TD {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}

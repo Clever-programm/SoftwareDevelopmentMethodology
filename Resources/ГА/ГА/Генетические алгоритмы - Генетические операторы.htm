@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0040)http://qai.narod.ru/GA/genoperators.html -->
+<!-- saved from url=http://qai.narod.ru/GA/genoperators.html --><HTML><HEAD><TITLE>Генетические алгоритмы - Генетические операторы</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META content="генетический алгоритм, однородный кроссовер, мутация" 
+name=KEYWORDS>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY vLink=navy aLink=#0 link=teal bgColor=#f0f8ff>
+<TABLE cellSpacing=2 cellPadding=10 width="98%" align=center border=0>
+  <TBODY lang=.>
+  <TR>
+    <TD width=150></TD>
+    <TD bgColor=teal>
+      <P align=center><FONT color=#f0f8ff><FONT size=6>Генетические 
+      алгоритмы</FONT></P></FONT></TD>
+    <TD width=100></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD><BR>
+      <H2 align=center>Генетические операторы</H2><BR>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=top width=150>
+      <TABLE borderColor=#f0f8ff width="100%" bgColor=teal border=1>
+        <TBODY>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="http://www.qai.narod.ru/index.html">На 
+главную</A></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="http://qai.narod.ru/GA/index.html">Генетические 
+            алгоритмы</A></TD></TR></TBODY></TABLE>
+      <P>
+      <TABLE borderColor=#f0f8ff width="100%" bgColor=teal border=1>
+        <TBODY>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="mailto:qai@mail.ru">Написать 
+      письмо</A></TD></TR></TBODY></TABLE></P></TD>
+    <TD align=justify>
+      <P align=justify>Генетические операторы необходимы, чтобы применить 
+      принципы наследственности и изменчивости к виртуальной популяции. Помимо 
+      отличительных особенностей, о которых будет рассказано ниже, у них есть 
+      такое свойство как <EM>вероятность</EM>. Т.е. описываемые операторы не 
+      обязательно применяются ко всем скрещиваемым особям, что вносит 
+      дополнительный элемент неопределенности в процесс поиска решения. В данном 
+      случае, неопределенность не подразумевает негативный фактор, а является 
+      своебразной "степенью свободы" работы генетического алгоритма. 
+      <P align=justify>Здесь описываются только два самых распространенных и 
+      необходимых оператора. Естественно, что существуют и другие генетические 
+      операторы (например, <EM>инверсия</EM>), но они применяются очень редко и 
+      толку от них не так уж и много, "не сказать ещё хужей" ;). 
+      <HR color=black>
+
+      <P align=justify><STRONG>Оператор кроссовера</STRONG> 
+      <P align=justify><EM>Оператор кроссовера (crossover operator)</EM>, иногда 
+      называемый кроссинговером, является основным генетическим оператором, за 
+      счет которого производится обмен генетическим материалом между особями. 
+      Моделирует процесс скрещивания особей. 
+      <P align=justify>Пусть имеются две родительские особи с хромосомами 
+      Х={x<SUB>i</SUB>, i=1,L} и Y={y<SUB>i</SUB>, i=1,L}. Случайным образом 
+      определяется точка внутри хромосомы, в которой обе хромосомы делятся на 
+      две части и обмениваются ими. Назовем эту точку точкой разрыва. Вообще 
+      говоря, в англоязычной литературе она называется <EM>точкой 
+      кроссовера</EM> (crossover point), просто, на мой взгляд, точка разрыва 
+      более образное название и к тому же позволяет в некоторых случаях избежать 
+      тавтологии. Описанный процесс изображен на рис.1. 
+      <P align=center><IMG alt=Кроссовер 
+      src="Генетические алгоритмы - Генетические операторы.files/crossover.gif" 
+      border=1><BR>Рис.1. Кроссовер 
+      <P align=justify>Данный тип кроссовера называется <EM>одноточечным</EM>, 
+      т.к. при нем родительские хромосомы разрезаются только в одной случайной 
+      точке. Также существует <EM>2-х и N-точечный кроссовер</EM>. В 2-х 
+      точечном кроссовере точек разрыва 2, а что касается N-точечного 
+      кроссовера, то т.к. его описания я не нашел, то у меня два мнения: 
+      <OL>
+        <LI>Точек разрыва столько, сколько генов в хромосоме, либо 
+        <LI>Если длина хромосомы L битов, то число точек разрыва равно (L-1), 
+        при этом потомки наследуют биты следующим образом: первому потомку 
+        достаются нечетные биты первого родителя и четные биты второго; у 
+        второго же потомка все наоборот. Т.е. получается как бы "расческа". 
+      </LI></OL>
+      <P align=justify>Какой из этих вариантов правильнее я не знаю. Если кто-то 
+      меня <A href="mailto:qai@mail.ru">просветит</A>, буду очень рад :). Лично 
+      я использую первый вариант N-точечного кроссовера таким образом, что на 
+      каждый ген приходится только одна точка разрыва. 
+      <P align=justify>Кроме описанных типов кроссовера есть ещё <EM>однородный 
+      кроссовер</EM>. Его особенность заключается в том, что значение каждого 
+      бита в хромосоме потомка определяется случаным образом из соответствующих 
+      битов родителей. Для этого вводится некоторая величина 
+      0&lt;p<SUB>0</SUB>&lt;1, и если случайное число больше p<SUB>0</SUB>, то 
+      на n-ю позицию первого потомка попадает n-й бит первого родителя, а на n-ю 
+      позицию второго - n-й бит второго родителя. В противном случае к первому 
+      потомку попадает бит второго родителя, а ко второму - первого. Такая 
+      операция проводится для всех битов хромосомы. 
+      <P align=justify>Вероятность кроссовера самая высокая среди генетических 
+      операторов и равна обычно 60% и больше. 
+      <HR color=black>
+
+      <P align=justify><STRONG>Оператор мутации</STRONG> 
+      <P align=justify>Оператор мутации (mutation operator) необходим для 
+      "выбивания" популяции из локального экстремума и способствует защите от 
+      преждевременной сходимости. Достигаются эти чудеса за счет того, что 
+      инвертируется случайно выбранный бит в хромосоме, что и показано на рис.2. 
+
+      <P align=justify>
+      <CENTER><IMG alt=Мутация 
+      src="Генетические алгоритмы - Генетические операторы.files/mutation.gif" 
+      border=1><BR>Рис.2. Мутация </CENTER>
+      <P align=justify>Так же как и кроссовер, мутация проводится не только по 
+      одной случайной точке. Можно выбирать некоторое количество точек в 
+      хромосоме для инверсии, причем их число также может быть случайным. Также 
+      можно инвертировать сразу некоторую группу подряд идущих точек. 
+      Вероятность мутации значительно меньше вероятности кроссовера и редко 
+      превышает 1%. 
+      <HR color=black>
+
+      <P align=justify><STRONG>Пример реализации</STRONG> 
+      <P align=justify>Обычно при реализации ГА к скрещиваемым особям сначала 
+      применяют оператор кроссовера, а потом оператор мутации, хотя возможны 
+      варианты. Например, оператор мутации можно применять только если к данной 
+      паре родительских особей не был применен оператор кроссовера (помните про 
+      вероятность?). В принципе, никто не мешает вообще не использовать 
+      вероятность проведения данного генетического оператора и применять 
+      кроссовер ко всем отобранным особям, а мутацию к каждому 100 потомку. В 
+      общем здесь - полная свобода действий. 
+      <P align=justify>Ниже приведен пример подпрограмм, реализующих операторы 
+      кроссовера и мутации на С++ для популяции, содержащей 16-разрядные 
+      хромосомы. Размер популяции: 50 особей. Ничего сложного, за исключением 
+      того, что популяция здесь представлена весьма условно и для большинства 
+      задач такой способ не подойдет, но, я надеюсь, что наглядно. <PRE><CODE>
+#include &lt;stdlib.h&gt;
+unsigned short MutationMask[] = {0x1, 0x2, 0x4, 0x8,
+                                 0x10, 0x20, 0x40, 0x80,
+                                 0x100, 0x200, 0x400, 0x800,
+                                 0x1000, 0x2000, 0x4000, 0x8000};
+
+unsigned short Inds[50],     // Популяция
+               SelInds[50];  // Особи отобранные для скрещивания
+
+void Crossover (int p1, p2, c1, c2) {
+  unsigned short left, right;
+
+  left = (unsigned short)(15.0 * (double)rand()/(double)RAND_MAX + 1);
+  left = ((unsigned short)0xffff&gt;&gt;left)&lt;&lt;left;
+  right = (unsigned short)0xffff ^ left;
+  
+  Inds[c1] = (SelInds[p1] &amp; left) | (SelInds[p2] &amp; right);
+  Inds[c2] = (SelInds[p2] &amp; left) | (SelInds[p1] &amp; right);
+}
+
+void Mutate (int j) {
+  int i = (double)rand() * 16.0 / ((double)RAND_MAX+1.0);
+  Inds[j] = Inds[j] ^ MutationMask[i];
+}
+</CODE></PRE>
+      <HR color=black>
+
+      <P align=justify>Источники: 
+      <OL>
+        <LI>Darrel Whitley "A Genetic Algorithm Tutorial", 1993. </LI></OL></TD>
+    <TD vAlign=top width=100>
+      <TABLE borderColor=#f0f8ff bgColor=teal border=1>
+        <TBODY>
+        <TR bgColor=teal>
+          <TD align=middle><FONT color=#f0f8ff>Ссылки</FONT></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="http://saisa.chat.ru/ga.html">Генетические алгоритмы от 
+            Saisa (Исаев С.А.)</A></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="http://g-u-t.chat.ru/ga/index.html">Генетические 
+            алгоритмы на g-u-t.chat.ru</A></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A 
+            href="http://www.estec.esa.nl/outreach/gatutor/Default.htm">GA 
+            Tutorial</A></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A href="http://www.aic.nrl.navy.mil/galist">GA 
+Archive</A></TD></TR>
+        <TR bgColor=#f0f8ff>
+          <TD><A 
+        href="http://www-illigal.ge.uiuc.edu:8080/">ISGEC</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<HR color=#b0b8bf>
+
+<TABLE cellSpacing=2 cellPadding=2 width="95%" align=center border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=. align=middle><FONT color=#b0b8bf>Made by Qwerty. 
+    2003.</FONT></TD></TR></TBODY></TABLE><!-- ><!-- "><!-- '><!-- --></TEXTAREA></FORM></TITLE></COMMENT></A>
+<DIV></DIV></SPAN></ILAYER></LAYER></IFRAME></NOFRAMES></STYLE></NOSCRIPT></TABLE></SCRIPT></APPLET></FONT>
+<STYLE>#bn {
+	DISPLAY: block
+}
+#bt {
+	DISPLAY: block
+}
+</STYLE>
+
+<SCRIPT language=JavaScript 
+src="Генетические алгоритмы - Генетические операторы.files/163"></SCRIPT>
+<!-- mailto:spm111@yandex.ru --></BODY></HTML>
